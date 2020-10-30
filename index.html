@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <meta charset="utf-8"/>
+        <title>ЗАВОД</title>
+        
+        <style>
+          html {
+                background-Color: rgb(12, 223, 223);
+            }
+
+            /*#doc_time {
+                    margin:3%;
+                    background: rgb(1, 1, 42);
+                    color: lime;
+                    font-weight:bold;
+                    font-style:italic;
+                    font-size: 70px;
+                    border-radius: 10px;/* закругление уловк рамки */
+           /* }*/
+           #Frame {                 
+                width: 570px; /* Ширина рамки */
+                height:  410px; /* Выста рамки */
+                /*padding: 5px;  Поля вокруг текста */
+                border: 5px solid red; /* Рамка вокруг слоя */
+                margin-left: 1935px; /* Отступ слева */
+                /*margin-top: 15px; /* Отступ сверху */
+                float: left; /* */
+                border-radius: 10px; /* закругление уловк рамки */
+            }
+            #Canvas {  
+                margin-top:0px;
+                margin-left:0px;         
+                width: 0px; /* Ширина рамки */
+                height:  0px; /* Выста рамки */                               
+               
+               
+            }
+            
+        </style>
+                
+        <script type="text/javascript" src="fabric.js"> //Подключение библиотеки Fabric.js 
+        </script>
+        <script type="text/javascript" src="jquery.js">//Подключение библиотеки jquery.js
+        </script>        
+        
+  </head>
+  <body>
+        <!--<span id="doc_time"> Дата и время </span>   -->               
+        <script type="text/javascript" src="clock.js">  //Строка сверху: дата, часы, температура.
+        </script> 
+
+       <div id="Canvas"> <canvas id='scheme' height='1060' width='1902' style = "border:1px solid black" >Обновите браузер</canvas></div>
+       <img src="Images/1.png"  id="image" >  
+        <script > // создаем "оболочку" вокруг canvas элемента             
+              var scheme = new fabric.Canvas('scheme', {
+                backgroundColor: 'rgb(12, 223, 223)' });
+              var object = {id:this.id,} //Для присвоение объекту уникального ID            
+        </script>     
+          <br>
+            
+            
+                    
+            <script type="text/javascript" src="MakeScheme.js">//Создание элементов мнемосхемы          
+            </script>
+    </body>
+</html>
